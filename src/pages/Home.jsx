@@ -1,18 +1,14 @@
-import destinations from "../data/destinations";
-import DestinationCard from "../components/DestinationCard";
+import PlaceCard from "../components/PlaceCard";
+import places from "../data/places";
 
-function Home() {
+const Home = () => {
   return (
-    <div className="container">
-      <h1>Explore Nepal 🇳🇵</h1>
-
-      <div className="grid">
-        {destinations.map((dest) => (
-          <DestinationCard key={dest.id} destination={dest} />
-        ))}
-      </div>
+    <div className="home">
+      {places.map((place) => (
+        <PlaceCard key={place.id} place={place} />
+      ))}
     </div>
   );
-}
+};
 
 export default Home;
